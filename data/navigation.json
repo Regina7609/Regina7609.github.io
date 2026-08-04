@@ -1,18 +1,62 @@
 [
-  {
-    "title": "Раздел 1",
-    "path": "/category1/",
-    "submenu": [
-      { "title": "Глава 1.1", "path": "/category1/subpage1.html" },
-      { "title": "Глава 1.2", "path": "/category1/subpage2.html" }
-    ]
-  },
-  {
-    "title": "Раздел 2",
-    "path": "/category2/",
-    "submenu": [
-      { "title": "Глава 2.1", "path": "/category2/subpage1.html" }
-    ]
-  }
-  // ... 5 других разделов
+    {
+        "title": "Раздел 1",
+        "path": "/category1/",
+        "submenu": [
+            { "title": "Подраздел 1.1", "path": "/category1/subpage1.html" },
+            { "title": "Подраздел 1.2", "path": "/category1/subpage2.html" },
+            { "title": "Подраздел 1.3", "path": "/category1/subpage3.html" }
+        ]
+    },
+    {
+        "title": "Раздел 2",
+        "path": "/category2/",
+        "submenu": [
+            { "title": "Подраздел 2.1", "path": "/category2/subpage1.html" },
+            { "title": "Подраздел 2.2", "path": "/category2/subpage2.html" }
+        ]
+    },
+    {
+        "title": "Раздел 3",
+        "path": "/category3/",
+        "submenu": [
+            { "title": "Подраздел 3.1", "path": "/category3/subpage1.html" },
+            { "title": "Подраздел 3.2", "path": "/category3/subpage2.html" },
+            { "title": "Подраздел 3.3", "path": "/category3/subpage3.html" },
+            { "title": "Подраздел 3.4", "path": "/category3/subpage4.html" }
+        ]
+    },
+    {
+        "title": "Раздел 4",
+        "path": "/category4/",
+        "submenu": [
+            { "title": "Подраздел 4.1", "path": "/category4/subpage1.html" },
+            { "title": "Подраздел 4.2", "path": "/category4/subpage2.html" }
+        ]
+    },
+    {
+        "title": "Раздел 5",
+        "path": "/category5/",
+        "submenu": [
+            { "title": "Подраздел 5.1", "path": "/category5/subpage1.html" },
+            { "title": "Подраздел 5.2", "path": "/category5/subpage2.html" }
+        ]
+    },
+    {
+        "title": "Раздел 6",
+        "path": "/category6/",
+        "submenu": [
+            { "title": "Подраздел 6.1", "path": "/category6/subpage1.html" },
+            { "title": "Подраздел 6.2", "path": "/category6/subpage2.html" },
+            { "title": "Подраздел 6.3", "path": "/category6/subpage3.html" }
+        ]
+    },
+    {
+        "title": "Раздел 7",
+        "path": "/category7/",
+        "submenu": [
+            { "title": "Подраздел 7.1", "path": "/category7/subpage1.html" },
+            { "title": "Подраздел 7.2", "path": "/category7/subpage2.html" }
+        ]
+    }
 ]
