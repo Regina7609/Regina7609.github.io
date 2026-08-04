@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Раздел 1",
+    "path": "/category1/",
+    "submenu": [
+      { "title": "Глава 1.1", "path": "/category1/subpage1.html" },
+      { "title": "Глава 1.2", "path": "/category1/subpage2.html" }
+    ]
+  },
+  {
+    "title": "Раздел 2",
+    "path": "/category2/",
+    "submenu": [
+      { "title": "Глава 2.1", "path": "/category2/subpage1.html" }
+    ]
+  }
+  // ... 5 других разделов
+]
