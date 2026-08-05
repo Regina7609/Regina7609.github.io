@@ -15,49 +15,60 @@ fetch('/data/navigation.json')
         document.getElementById('main-nav').innerHTML = '<li>Ошибка загрузки меню</li>';
     });
 
-// Построение навигации
+// Рекурсивное построение вложенного меню
+function buildSubmenu(items, parentElement) {
+    const ul = document.createElement('ul');
+
+    items.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.path;
+        a.textContent = item.title;
+        li.appendChild(a);
+
+        // Если есть вложенное подменю — строим рекурсивно
+        if (item.submenu && item.submenu.length > 0) {
+            const nestedDiv = document.createElement('div');
+            nestedDiv.className = 'mega-menu';
+            buildSubmenu(item.submenu, nestedDiv);
+            li.appendChild(nestedDiv);
+        }
+
+        ul.appendChild(li);
+    });
+
+    parentElement.appendChild(ul);
+}
+
+// Построение главной навигации
 function buildNavigation(items) {
     const nav = document.getElementById('main-nav');
 
     items.forEach(item => {
-        // Создаём элемент списка
         const li = document.createElement('li');
         li.className = 'nav-item';
 
-        // Основная ссылка раздела
         const mainLink = document.createElement('a');
         mainLink.href = item.path;
         mainLink.textContent = item.title;
         mainLink.className = 'main-link';
         li.appendChild(mainLink);
 
-        // Подменю
+        // Если есть подменю — строим рекурсивно
         if (item.submenu && item.submenu.length > 0) {
             const subDiv = document.createElement('div');
             subDiv.className = 'mega-menu';
-
-            const ul = document.createElement('ul');
-            item.submenu.forEach(sub => {
-                const subLi = document.createElement('li');
-                const subA = document.createElement('a');
-                subA.href = sub.path;
-                subA.textContent = sub.title;
-                subLi.appendChild(subA);
-                ul.appendChild(subLi);
-            });
-
-            subDiv.appendChild(ul);
+            buildSubmenu(item.submenu, subDiv);
             li.appendChild(subDiv);
         }
 
         nav.appendChild(li);
     });
 
-    // Добавляем обработчики для мобильных устройств
     setupMobileMenu();
 }
 
-// Подсветка текущей страницы в меню
+// Подсветка текущей страницы
 function highlightCurrentPage() {
     const currentPath = window.location.pathname;
     const allLinks = document.querySelectorAll('#main-nav a');
@@ -71,7 +82,7 @@ function highlightCurrentPage() {
     });
 }
 
-// Мобильное меню (открытие по клику)
+// Мобильное меню
 function setupMobileMenu() {
     const navItems = document.querySelectorAll('.nav-item');
 
@@ -79,26 +90,21 @@ function setupMobileMenu() {
         const mainLink = item.querySelector('.main-link');
 
         mainLink.addEventListener('click', function (e) {
-            // Проверяем, есть ли подменю
             const megaMenu = item.querySelector('.mega-menu');
-            if (!megaMenu) return; // Если нет подменю, просто переходим по ссылке
+            if (!megaMenu) return;
 
-            // На мобильных устройствах предотвращаем переход
             if (window.innerWidth <= 768) {
                 e.preventDefault();
-                // Закрываем все остальные открытые меню
                 navItems.forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
                     }
                 });
-                // Переключаем текущее
                 item.classList.toggle('active');
             }
         });
     });
 
-    // Закрываем меню при клике вне его
     document.addEventListener('click', function (e) {
         if (!e.target.closest('.nav-item')) {
             navItems.forEach(item => item.classList.remove('active'));
