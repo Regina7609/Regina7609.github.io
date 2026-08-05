@@ -1,19 +1,48 @@
 [
     {
         "title": "Раздел 1",
-        "path": "/category1/",
-        "submenu": [
-            { "title": "Подраздел 1.1", "path": "/category1/subpage1.html" },
-            { "title": "Подраздел 1.2", "path": "/category1/subpage2.html" },
-            { "title": "Подраздел 1.3", "path": "/category1/subpage3.html" }
-        ]
+        "path": "/"
     },
     {
         "title": "Раздел 2",
         "path": "/category2/",
         "submenu": [
             { "title": "Подраздел 2.1", "path": "/category2/subpage1.html" },
-            { "title": "Подраздел 2.2", "path": "/category2/subpage2.html" }
+            { "title": "Подраздел 2.2", "path": "/category2/subpage2.html" },
+            { "title": "Подраздел 2.3", "path": "/category2/subpage3.html" },
+            {
+                "title": "Подраздел 2.4",
+                "path": "/category2/subpage4.html",
+                "submenu": [
+                    {
+                        "title": "Вложенный 2.4.1",
+                        "path": "/category2/subpage4/nested1.html",
+                        "submenu": [
+                            { "title": "Глубинный 2.4.1.1", "path": "/category2/subpage4/nested1/deep1.html" },
+                            { "title": "Глубинный 2.4.1.2", "path": "/category2/subpage4/nested1/deep2.html" },
+                            { "title": "Глубинный 2.4.1.3", "path": "/category2/subpage4/nested1/deep3.html" },
+                            { "title": "Глубинный 2.4.1.4", "path": "/category2/subpage4/nested1/deep4.html" },
+                            { "title": "Глубинный 2.4.1.5", "path": "/category2/subpage4/nested1/deep5.html" },
+                            { "title": "Глубинный 2.4.1.6", "path": "/category2/subpage4/nested1/deep6.html" },
+                            { "title": "Глубинный 2.4.1.7", "path": "/category2/subpage4/nested1/deep7.html" }
+                        ]
+                    },
+                    {
+                        "title": "Вложенный 2.4.2",
+                        "path": "/category2/subpage4/nested2.html",
+                        "submenu": [
+                            { "title": "Глубинный 2.4.2.1", "path": "/category2/subpage4/nested2/deep1.html" },
+                            { "title": "Глубинный 2.4.2.2", "path": "/category2/subpage4/nested2/deep2.html" },
+                            { "title": "Глубинный 2.4.2.3", "path": "/category2/subpage4/nested2/deep3.html" },
+                            { "title": "Глубинный 2.4.2.4", "path": "/category2/subpage4/nested2/deep4.html" },
+                            { "title": "Глубинный 2.4.2.5", "path": "/category2/subpage4/nested2/deep5.html" },
+                            { "title": "Глубинный 2.4.2.6", "path": "/category2/subpage4/nested2/deep6.html" },
+                            { "title": "Глубинный 2.4.2.7", "path": "/category2/subpage4/nested2/deep7.html" }
+                        ]
+                    }
+                ]
+            },
+            { "title": "Подраздел 2.5", "path": "/category2/subpage5.html" }
         ]
     },
     {
@@ -21,9 +50,7 @@
         "path": "/category3/",
         "submenu": [
             { "title": "Подраздел 3.1", "path": "/category3/subpage1.html" },
-            { "title": "Подраздел 3.2", "path": "/category3/subpage2.html" },
-            { "title": "Подраздел 3.3", "path": "/category3/subpage3.html" },
-            { "title": "Подраздел 3.4", "path": "/category3/subpage4.html" }
+            { "title": "Подраздел 3.2", "path": "/category3/subpage2.html" }
         ]
     },
     {
@@ -31,7 +58,8 @@
         "path": "/category4/",
         "submenu": [
             { "title": "Подраздел 4.1", "path": "/category4/subpage1.html" },
-            { "title": "Подраздел 4.2", "path": "/category4/subpage2.html" }
+            { "title": "Подраздел 4.2", "path": "/category4/subpage2.html" },
+            { "title": "Подраздел 4.3", "path": "/category4/subpage3.html" }
         ]
     },
     {
@@ -39,7 +67,9 @@
         "path": "/category5/",
         "submenu": [
             { "title": "Подраздел 5.1", "path": "/category5/subpage1.html" },
-            { "title": "Подраздел 5.2", "path": "/category5/subpage2.html" }
+            { "title": "Подраздел 5.2", "path": "/category5/subpage2.html" },
+            { "title": "Подраздел 5.3", "path": "/category5/subpage3.html" },
+            { "title": "Подраздел 5.4", "path": "/category5/subpage4.html" }
         ]
     },
     {
@@ -47,16 +77,11 @@
         "path": "/category6/",
         "submenu": [
             { "title": "Подраздел 6.1", "path": "/category6/subpage1.html" },
-            { "title": "Подраздел 6.2", "path": "/category6/subpage2.html" },
-            { "title": "Подраздел 6.3", "path": "/category6/subpage3.html" }
+            { "title": "Подраздел 6.2", "path": "/category6/subpage2.html" }
         ]
     },
     {
         "title": "Раздел 7",
-        "path": "/category7/",
-        "submenu": [
-            { "title": "Подраздел 7.1", "path": "/category7/subpage1.html" },
-            { "title": "Подраздел 7.2", "path": "/category7/subpage2.html" }
-        ]
+        "path": "/category7/"
     }
 ]
