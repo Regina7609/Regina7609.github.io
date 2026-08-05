@@ -1,10 +1,10 @@
 [
     {
-        "title": "Раздел 1",
+        "title": "ГАЛОЎНАЯ",
         "path": "/"
     },
     {
-        "title": "Раздел 2",
+        "title": "З ВОПЫТУ РАБОТЫ",
         "path": "/category2/",
         "submenu": [
             { "title": "Подраздел 2.1", "path": "/category2/subpage1.html" },
@@ -46,7 +46,7 @@
         ]
     },
     {
-        "title": "Раздел 3",
+        "title": "КАБІНЕТ",
         "path": "/category3/",
         "submenu": [
             { "title": "Подраздел 3.1", "path": "/category3/subpage1.html" },
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "title": "Раздел 4",
+        "title": "Пазакласная Дзейнасць",
         "path": "/category4/",
         "submenu": [
             { "title": "Подраздел 4.1", "path": "/category4/subpage1.html" },
@@ -63,17 +63,17 @@
         ]
     },
     {
-        "title": "Раздел 5",
+        "title": "Купалнка",
         "path": "/category5/",
         "submenu": [
-            { "title": "Подраздел 5.1", "path": "/category5/subpage1.html" },
+            { "title": "Подразідел 5.1", "path": "/category5/subpage1.html" },
             { "title": "Подраздел 5.2", "path": "/category5/subpage2.html" },
             { "title": "Подраздел 5.3", "path": "/category5/subpage3.html" },
             { "title": "Подраздел 5.4", "path": "/category5/subpage4.html" }
         ]
     },
     {
-        "title": "Раздел 6",
+        "title": "Экзамены",
         "path": "/category6/",
         "submenu": [
             { "title": "Подраздел 6.1", "path": "/category6/subpage1.html" },
@@ -81,7 +81,7 @@
         ]
     },
     {
-        "title": "Раздел 7",
+        "title": "Спасылкі",
         "path": "/category7/"
     }
 ]
