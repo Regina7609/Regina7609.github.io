@@ -54,7 +54,7 @@
         ]
     },
     {
-        "title": "Пазакласная Дзейнасць",
+        "title": "ПАЗАКЛАСНАЯ ДЗЕЙНАСЦЬ",
         "path": "/category4/",
         "submenu": [
             { "title": "Подраздел 4.1", "path": "/category4/subpage1.html" },
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "title": "Купалнка",
+        "title": "КУПАЛІНКА",
         "path": "/category5/",
         "submenu": [
             { "title": "Подразідел 5.1", "path": "/category5/subpage1.html" },
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "title": "Экзамены",
+        "title": "ЭКЗАМЕНЫ",
         "path": "/category6/",
         "submenu": [
             { "title": "Подраздел 6.1", "path": "/category6/subpage1.html" },
@@ -81,7 +81,7 @@
         ]
     },
     {
-        "title": "Спасылкі",
+        "title": "СПАСЫЛКІ",
         "path": "/category7/"
     }
 ]
