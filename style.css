@@ -1,163 +1,138 @@
-/* Сброс */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ====== ПЕРЕМЕННЫЕ ====== */
+:root {
+    --bg: #f5f6fa;
+    --header: #1a2740;
+    --header-hover: #243450;
+    --card: white;
+    --accent: #1abc9c;
+    --text: #2d3436;
+    --link: #0984e3;
+    --shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
+/* ====== СБРОС ====== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* ====== БАЗА ====== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
 }
 
-/* Навигация */
+/* ====== ШАПКА ====== */
 header {
-    background-color: #2c3e50;
-    padding: 10px 20px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #1a2740, #111c2e);
+    padding: 12px 24px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
     margin-bottom: 30px;
 }
 
+/* ====== МЕНЮ ====== */
 #main-nav {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px;
 }
 
-.nav-item {
-    position: relative;
-}
+.nav-item { position: relative; }
 
 .main-link {
     display: block;
-    padding: 12px 20px;
+    padding: 14px 22px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s ease;
 }
 
 .main-link:hover {
-    background-color: #34495e;
+    background-color: rgba(255,255,255,0.12);
 }
 
-/* Mega Menu — все уровни */
+/* ====== MEGA MENU ====== */
 .mega-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 0 0 8px 8px;
-    min-width: 280px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: var(--card);
+    border-radius: 10px;
+    min-width: 260px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     z-index: 1000;
+    overflow: hidden;
 }
 
-/* Вложенное меню третьего уровня — выезжает справа */
 .mega-menu .mega-menu {
     top: 0;
     left: 100%;
-    border-radius: 0 8px 8px 0;
-}
-
-.mega-menu ul {
-    list-style: none;
-    padding: 10px 0;
-}
-
-.mega-menu li {
-    position: relative;
-    padding: 0;
+    border-radius: 0 10px 10px 0;
 }
 
 .mega-menu a {
     display: block;
-    padding: 10px 20px;
-    color: #2c3e50;
+    padding: 11px 20px;
+    color: var(--text);
     text-decoration: none;
-    transition: background-color 0.2s;
-    white-space: nowrap;
+    font-weight: 500;
+    transition: background 0.15s;
 }
 
 .mega-menu a:hover {
-    background-color: #ecf0f1;
+    background-color: #f0f0f0;
+    color: #000;
 }
 
-/* Показываем меню при наведении */
 .nav-item:hover > .mega-menu,
 .mega-menu li:hover > .mega-menu {
     display: block;
 }
 
-/* Для мобильных — по клику */
-.nav-item.active > .mega-menu,
-.mega-menu li.active > .mega-menu {
-    display: block;
-}
-
-/* Основной контент */
+/* ====== КОНТЕНТ ====== */
 main {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
     margin-bottom: 30px;
 }
 
-h1 {
-    margin-bottom: 15px;
-    color: #2c3e50;
+h1 { color: var(--header); margin-bottom: 16px; }
+
+/* ====== КАРТИНКИ ====== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 15px 0;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
-/* Подвал */
+/* ====== ПОДВАЛ ====== */
 footer {
     text-align: center;
-    padding: 20px;
-    color: #777;
-    font-size: 0.9em;
+    padding: 24px;
+    color: #999;
+    font-size: 14px;
 }
 
-/* Адаптивность */
+/* ====== МОБИЛЬНЫЕ ====== */
 @media (max-width: 768px) {
-    #main-nav {
-        flex-direction: column;
-    }
-
-    .mega-menu {
+    #main-nav { flex-direction: column; }
+    .mega-menu, .mega-menu .mega-menu {
         position: static;
         box-shadow: none;
-        border: none;
-        background-color: #34495e;
+        background: #243450;
+        border-radius: 0;
     }
-
-    .mega-menu .mega-menu {
-        position: static;
-        background-color: #2c3e50;
-    }
-
-    .mega-menu a {
-        color: white;
-        padding-left: 30px;
-    }
-
-    .mega-menu .mega-menu a {
-        padding-left: 50px;
-    }
-
-    .mega-menu a:hover {
-        background-color: #2c3e50;
-    }
+    .mega-menu a { color: white; }
+    .mega-menu a:hover { background: #1a2740; }
 }
