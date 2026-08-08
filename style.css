@@ -136,3 +136,26 @@ footer {
     .mega-menu a { color: white; }
     .mega-menu a:hover { background: #1a2740; }
 }
+/* Списки 2-го уровня (подподразделы, например, Инновационный проект 2022-2025) */
+.menu ul li ul li ul, 
+ul.menu-sections li ul li ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+}
+
+/* Списки 3-го уровня (подподподразделы) */
+.menu ul li ul li ul li ul, 
+ul.menu-sections li ul li ul li ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    padding-left: 15px; /* Сдвиг для визуального разделения уровней */
+}
+
+/* Сброс ограничений скрытия при наведении, если они были забагованы */
+.menu li:hover ul, .menu li:hover ul li ul {
+    display: block !important;
+}
