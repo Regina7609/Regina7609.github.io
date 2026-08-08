@@ -1,161 +1,220 @@
-/* ====== ПЕРЕМЕННЫЕ ====== */
-:root {
-    --bg: #f5f6fa;
-    --header: #1a2740;
-    --header-hover: #243450;
-    --card: white;
-    --accent: #1abc9c;
-    --text: #2d3436;
-    --link: #0984e3;
-    --shadow: 0 2px 10px rgba(0,0,0,0.08);
-}
-
 /* ====== СБРОС ====== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ====== БАЗА ====== */
+/* ====== БАЗА (как на сайте школы) ====== */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
 
-/* ====== ШАПКА ====== */
+/* ====== ВЕРХНЯЯ ШАПКА (как на сайте школы) ====== */
 header {
-    background: linear-gradient(135deg, #1a2740, #111c2e);
-    padding: 12px 24px;
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    margin-bottom: 30px;
+    background: linear-gradient(to bottom, #2d5a27, #1e3d1a);
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
 }
 
-/* ====== МЕНЮ ====== */
+/* ====== МЕНЮ (в стиле школы) ====== */
 #main-nav {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-item { position: relative; }
+.nav-item {
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
 
 .main-link {
     display: block;
-    padding: 14px 22px;
+    padding: 12px 18px;
     color: white;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: all 0.2s ease;
+    font-weight: normal;
+    font-size: 14px;
+    border-radius: 0;
+    transition: background 0.2s;
 }
 
 .main-link:hover {
-    background-color: rgba(255,255,255,0.12);
+    background-color: #1e3d1a;
 }
 
-/* ====== MEGA MENU ====== */
+/* ====== MEGA MENU (ВТОРОЙ УРОВЕНЬ) ====== */
 .mega-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--card);
-    border-radius: 10px;
-    min-width: 260px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    border-top: 3px solid #2d5a27;
+    border-radius: 0;
+    min-width: 220px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
     z-index: 1000;
-    overflow: hidden;
+    overflow: visible;
 }
 
-.mega-menu .mega-menu {
-    top: 0;
-    left: 100%;
-    border-radius: 0 10px 10px 0;
+.mega-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mega-menu li {
+    position: relative;
+    padding: 0;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .mega-menu a {
     display: block;
-    padding: 11px 20px;
-    color: var(--text);
+    padding: 9px 15px;
+    color: #333333;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: normal;
+    font-size: 13px;
     transition: background 0.15s;
+    white-space: nowrap;
 }
 
 .mega-menu a:hover {
-    background-color: #f0f0f0;
-    color: #000;
+    background-color: #e8f0e4;
+    color: #1e3d1a;
 }
 
-.nav-item:hover > .mega-menu,
+/* ====== ТРЕТИЙ УРОВЕНЬ (выезжает справа) ====== */
+.mega-menu .mega-menu {
+    top: -3px;
+    left: 100%;
+    border-top: 3px solid #2d5a27;
+    border-radius: 0;
+}
+
+/* ====== ПОКАЗ МЕНЮ ПРИ НАВЕДЕНИИ ====== */
+.nav-item:hover > .mega-menu {
+    display: block;
+}
+
 .mega-menu li:hover > .mega-menu {
     display: block;
 }
 
-/* ====== КОНТЕНТ ====== */
+/* ====== ОСНОВНОЙ КОНТЕНТ (как на сайте школы) ====== */
 main {
-    background: var(--card);
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    margin-bottom: 30px;
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
 }
 
-h1 { color: var(--header); margin-bottom: 16px; }
+h1 {
+    color: #2d5a27;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2d5a27;
+}
+
+h2 {
+    color: #2d5a27;
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+}
+
+a {
+    color: #2d5a27;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #1e3d1a;
+    text-decoration: none;
+}
 
 /* ====== КАРТИНКИ ====== */
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    margin: 15px 0;
+    border: 1px solid #dddddd;
+    padding: 3px;
+    background: white;
+    border-radius: 0;
+    margin: 10px 0;
 }
 
 /* ====== ПОДВАЛ ====== */
 footer {
     text-align: center;
-    padding: 24px;
-    color: #999;
-    font-size: 14px;
+    padding: 15px;
+    color: #666666;
+    font-size: 12px;
+    border-top: 2px solid #2d5a27;
+    background: #f5f5f5;
+    margin-top: 20px;
+}
+
+/* ====== ХЛЕБНЫЕ КРОШКИ (опционально) ====== */
+.breadcrumbs {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.breadcrumbs a {
+    color: #2d5a27;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
 }
 
 /* ====== МОБИЛЬНЫЕ ====== */
 @media (max-width: 768px) {
-    #main-nav { flex-direction: column; }
+    #main-nav {
+        flex-direction: column;
+    }
+    
+    .nav-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
     .mega-menu, .mega-menu .mega-menu {
         position: static;
         box-shadow: none;
-        background: #243450;
+        background: #f5f5f5;
+        border: none;
         border-radius: 0;
     }
-    .mega-menu a { color: white; }
-    .mega-menu a:hover { background: #1a2740; }
-}
-/* Списки 2-го уровня (подподразделы, например, Инновационный проект 2022-2025) */
-.menu ul li ul li ul, 
-ul.menu-sections li ul li ul {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-}
-
-/* Списки 3-го уровня (подподподразделы) */
-.menu ul li ul li ul li ul, 
-ul.menu-sections li ul li ul li ul {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-    padding-left: 15px; /* Сдвиг для визуального разделения уровней */
-}
-
-/* Сброс ограничений скрытия при наведении, если они были забагованы */
-.menu li:hover ul, .menu li:hover ul li ul {
-    display: block !important;
+    
+    .mega-menu a {
+        color: #333;
+        padding-left: 25px;
+    }
+    
+    .mega-menu .mega-menu a {
+        padding-left: 35px;
+    }
+    
+    .mega-menu a:hover {
+        background: #e0e0e0;
+    }
 }
